@@ -2,10 +2,8 @@ FROM debian:bullseye
 MAINTAINER lukas.ignatavicius@locatory.com
 
 RUN apt-get update -y \
-    && apt-get install -y curl ssh-client ruby-full \
+    && apt-get install -y curl ssh-client \
     && rm -rf /var/lib/apt/lists/*
-RUN /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && \
-    brew install gitversion
 
 
 # docker
