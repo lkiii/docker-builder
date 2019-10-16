@@ -2,7 +2,7 @@ FROM debian:bullseye
 MAINTAINER lukas.ignatavicius@locatory.com
 
 RUN apt-get update -y \
-    && apt-get install -y iptables curl ssh-client \
+    && apt-get install -y iptables curl ssh-client git \
     && rm -rf /var/lib/apt/lists/*
 
 # docker
